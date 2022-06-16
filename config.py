@@ -1,6 +1,3 @@
-# bokeh_stock_prices/config.py
-# Configuration settings, including the Alpha Vantage API key
-# Remember to keep this file private
 
 import os
 
