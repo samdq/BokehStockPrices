@@ -28,6 +28,9 @@ def run_interactive_charts_example():
         p.xaxis.axis_label_text_font_size = "12pt"
         p.yaxis.axis_label_text_font_size = "12pt"
 
+        # Embed the Bokeh plot in an HTML file
+        output_file("interactive_chart.html")
+
         # Show the plot
         show(p)
 
