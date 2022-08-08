@@ -22,7 +22,11 @@ def run_interactive_charts_example():
         hover.formatters = {"@x": "datetime"}
         p.add_tools(hover)
 
-
+        # Customize chart appearance
+        p.title.text_font_size = "16pt"
+        p.legend.label_text_font_size = "12pt"
+        p.xaxis.axis_label_text_font_size = "12pt"
+        p.yaxis.axis_label_text_font_size = "12pt"
 
         # Embed the Bokeh plot in an HTML file
         output_file("interactive_chart.html")
