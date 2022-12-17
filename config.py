@@ -1,3 +1,11 @@
+# bokeh_stock_prices/config.py
+# Configuration settings, including the Alpha Vantage API key
+# Remember to keep this file private
+
+import os
+
+class Config:
+    ALPHA_VANTAGE_API_KEY = "your_alpha_vantage_api_key"
 
     @staticmethod
     def get_data_dir():
