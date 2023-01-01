@@ -14,7 +14,6 @@ def run_interactive_charts_example():
                    x_axis_type="datetime", sizing_mode="stretch_width", toolbar_location="above")
 
         # Plot the closing price as a line
-        p.line(stock_data.index, stock_data["4. close"], line_width=2, legend_label="Closing Price", color="blue")
 
         # Add HoverTool for displaying additional information on hover
         hover = HoverTool()
