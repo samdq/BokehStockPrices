@@ -10,6 +10,10 @@ from bokeh.resources import INLINE
 from bokeh_stock_prices.fetch_stock_data import fetch_stock_data
 from bokeh_stock_prices.config import ALPHA_VANTAGE_API_KEY
 
+# Function to run the customize chart appearance example
+def run_customize_chart_appearance_example():
+    stock_symbol = "AAPL"
+    stock_data = fetch_stock_data(stock_symbol, interval="1d", output_size="compact")
 
     if stock_data is not None:
         # Create a Bokeh figure
