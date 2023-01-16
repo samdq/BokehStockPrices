@@ -30,11 +30,7 @@ def run_customize_chart_appearance_example():
         hover.formatters = {"@x": "datetime"}
         p.add_tools(hover)
 
-        # Customize chart appearance
-        p.title.text_font_size = "16pt"
-        p.legend.label_text_font_size = "12pt"
-        p.xaxis.axis_label_text_font_size = "12pt"
-        p.yaxis.axis_label_text_font_size = "12pt"
+
 
         # Add a shaded region for a specific time period (e.g., market downturn)
         downturn_start_date = pd.to_datetime("2022-01-01")
