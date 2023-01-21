@@ -1,7 +1,14 @@
 # bokeh_stock_prices/customize_chart_appearance.py
 # Showcases customizing chart appearance using color palettes and annotations
 
-
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import HoverTool, Band, Label
+from bokeh.layouts import column
+from bokeh.io import curdoc
+from bokeh.embed import components
+from bokeh.resources import INLINE
+from bokeh_stock_prices.fetch_stock_data import fetch_stock_data
+from bokeh_stock_prices.config import ALPHA_VANTAGE_API_KEY
 
 # Function to run the customize chart appearance example
 def run_customize_chart_appearance_example():
