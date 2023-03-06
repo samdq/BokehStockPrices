@@ -4,9 +4,7 @@ BokehStockPrices is a data visualization project that demonstrates how to use Bo
 
 ## Key Features
 
-### 1. Fetch Stock Data from Alpha Vantage API
-- Utilizes the Alpha Vantage API to download historical stock prices.
-- API integration logic is implemented in the fetch_stock_data.py module.
+
 
 ## 2. Interactive Line Charts
 - Employs Bokeh to create interactive line charts with zooming and panning capabilities.
