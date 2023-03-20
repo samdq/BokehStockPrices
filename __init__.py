@@ -1,5 +1,4 @@
 # bokeh_stock_prices/__init__.py
-# Initialization file for the BokehStockPrices module
 
 import os
 
