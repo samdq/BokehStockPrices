@@ -1,5 +1,3 @@
-# bokeh_stock_prices/__init__.py
-
 import os
 
 # Ensure that the 'data' directory exists
