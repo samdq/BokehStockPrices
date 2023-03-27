@@ -19,7 +19,7 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
             "apikey": ALPHA_VANTAGE_API_KEY,
             "outputsize": output_size,
         }
-       # Make API request
+        # Make API request
         response = requests.get(api_url, params=params)
         response.raise_for_status()
 
@@ -30,3 +30,14 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
             df.index = pd.to_datetime(df.index)
             df.sort_index(inplace=True)
             return df
+        else:
+            print(f"Error: {data['Note']}")
+            return None
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching stock data for {symbol}: {e}")
+        return None
+
+# Example Usage:
+# stock_symbol = "AAPL"
+# stock_data = fetch_stock_data(stock_symbol, interval="1d", output_size="compact")
+# print(stock_data.head())
