@@ -12,13 +12,7 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
         # API endpoint and parameters
         api_url = "https://www.alphavantage.co/query"
         function = "TIME_SERIES_INTRADAY" if interval == "1d" else "TIME_SERIES_DAILY"
-        params = {
-            "function": function,
-            "symbol": symbol,
-            "interval": interval,
-            "apikey": ALPHA_VANTAGE_API_KEY,
-            "outputsize": output_size,
-        }
+
         # Make API request
         response = requests.get(api_url, params=params)
         response.raise_for_status()
