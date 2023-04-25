@@ -35,3 +35,24 @@ def run_customize_chart_appearance_example():
         p.legend.label_text_font_size = "12pt"
         p.xaxis.axis_label_text_font_size = "12pt"
         p.yaxis.axis_label_text_font_size = "12pt"
+
+        # Add a shaded region for a specific time period (e.g., market downturn)
+        downturn_start_date = pd.to_datetime("2022-01-01")
+        downturn_end_date = pd.to_datetime("2022-04-01")
+        downturn_band = Band(base="x", lower=downturn_start_date, upper=downturn_end_date,
+                             level="underlay", fill_alpha=0.1, fill_color="red", line_color=None)
+        p.add_layout(downturn_band)
+
+        # Add a label annotation
+        label = Label(x=pd.to_datetime("2022-03-01"), y=stock_data["4. close"].max(), text="Market Downturn",
+                      render_mode="css", text_font_size="12pt", text_color="red")
+        p.add_layout(label)
+
+        # Embed the Bokeh plot in an HTML file
+        output_file("customize_chart_appearance_chart.html")
+
+        # Show the plot
+        show(p)
+
+# Example Usage:
+# run_customize_chart_appearance_example()
