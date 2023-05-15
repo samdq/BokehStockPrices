@@ -1,4 +1,5 @@
-
+# bokeh_stock_prices/fetch_stock_data.py
+# Logic to fetch historical stock data from the Alpha Vantage API
 
 import os
 import requests
