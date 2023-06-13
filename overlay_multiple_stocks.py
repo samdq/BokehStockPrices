@@ -10,6 +10,10 @@ from bokeh.resources import INLINE
 from bokeh_stock_prices.fetch_stock_data import fetch_stock_data
 from bokeh_stock_prices.config import ALPHA_VANTAGE_API_KEY
 
+# Function to run the overlay multiple stocks example
+def run_overlay_multiple_stocks_example():
+    symbols = ["AAPL", "GOOGL", "MSFT"]
+    colors = ["blue", "green", "red"]
 
     # Create a Bokeh figure
     p = figure(title="Overlay Multiple Stocks", x_axis_label="Date", y_axis_label="Closing Price",
