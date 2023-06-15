@@ -32,7 +32,11 @@ def run_overlay_multiple_stocks_example():
     hover.formatters = {"@x": "datetime"}
     p.add_tools(hover)
 
-
+    # Customize chart appearance
+    p.title.text_font_size = "16pt"
+    p.legend.label_text_font_size = "12pt"
+    p.xaxis.axis_label_text_font_size = "12pt"
+    p.yaxis.axis_label_text_font_size = "12pt"
 
     # Show the legend
     p.legend.location = "top_left"
