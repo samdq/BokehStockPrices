@@ -38,7 +38,12 @@ def run_overlay_multiple_stocks_example():
     p.xaxis.axis_label_text_font_size = "12pt"
     p.yaxis.axis_label_text_font_size = "12pt"
 
+    # Show the legend
+    p.legend.location = "top_left"
+    p.legend.click_policy = "hide"
 
+    # Embed the Bokeh plot in an HTML file
+    output_file("overlay_multiple_stocks_chart.html")
 
     # Show the plot
     show(p)
