@@ -25,3 +25,8 @@ class Config:
         os.makedirs(static_dir, exist_ok=True)
         return static_dir
 
+# Example Usage:
+# api_key = Config.ALPHA_VANTAGE_API_KEY
+# data_directory = Config.get_data_dir()
+# templates_directory = Config.get_templates_dir()
+# static_directory = Config.get_static_dir()
