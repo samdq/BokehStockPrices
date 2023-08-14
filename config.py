@@ -13,11 +13,6 @@ class Config:
         os.makedirs(data_dir, exist_ok=True)
         return data_dir
 
-    @staticmethod
-    def get_templates_dir():
-        templates_dir = os.path.join(os.path.dirname(__file__), "templates")
-        os.makedirs(templates_dir, exist_ok=True)
-        return templates_dir
 
     @staticmethod
     def get_static_dir():
