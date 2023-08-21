@@ -1,7 +1,15 @@
 # bokeh_stock_prices/interactive_charts.py
 # Demonstrates creating interactive line charts using Bokeh with zooming and panning capabilities
 
-
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import HoverTool
+from bokeh.io import curdoc
+from bokeh.embed import components
+from bokeh.resources import INLINE
+from bokeh.layouts import column
+from bokeh.models.widgets import Div
+from bokeh_stock_prices.fetch_stock_data import fetch_stock_data
+from bokeh_stock_prices.config import ALPHA_VANTAGE_API_KEY
 
 # Function to run the interactive charts example
 def run_interactive_charts_example():
