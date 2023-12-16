@@ -25,17 +25,7 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
 
         # Parse response JSON into DataFrame
         data = response.json()
-        if "Time Series (Daily)" in data:
-            df = pd.DataFrame(data["Time Series (Daily)"]).T
-            df.index = pd.to_datetime(df.index)
-            df.sort_index(inplace=True)
-            return df
-        else:
-            print(f"Error: {data['Note']}")
-            return None
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching stock data for {symbol}: {e}")
-        return None
+
 
 # Example Usage:
 # stock_symbol = "AAPL"
