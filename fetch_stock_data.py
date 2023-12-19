@@ -37,7 +37,3 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
         print(f"Error fetching stock data for {symbol}: {e}")
         return None
 
-# Example Usage:
-# stock_symbol = "AAPL"
-# stock_data = fetch_stock_data(stock_symbol, interval="1d", output_size="compact")
-# print(stock_data.head())
