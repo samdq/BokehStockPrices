@@ -20,6 +20,8 @@ def fetch_stock_data(symbol, interval="1d", output_size="compact"):
             "outputsize": output_size,
         }
         # Make API request
+        response = requests.get(api_url, params=params)
+        response.raise_for_status()
 
         # Parse response JSON into DataFrame
         data = response.json()
