@@ -41,3 +41,12 @@ def run_overlay_multiple_stocks_example():
     # Show the legend
     p.legend.location = "top_left"
     p.legend.click_policy = "hide"
+
+    # Embed the Bokeh plot in an HTML file
+    output_file("overlay_multiple_stocks_chart.html")
+
+    # Show the plot
+    show(p)
+
+# Example Usage:
+# run_overlay_multiple_stocks_example()
