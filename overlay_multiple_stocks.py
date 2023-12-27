@@ -19,12 +19,7 @@ def run_overlay_multiple_stocks_example():
     p = figure(title="Overlay Multiple Stocks", x_axis_label="Date", y_axis_label="Closing Price",
                x_axis_type="datetime", sizing_mode="stretch_width", toolbar_location="above")
 
-    for symbol, color in zip(symbols, colors):
-        stock_data = fetch_stock_data(symbol, interval="1d", output_size="compact")
-        if stock_data is not None:
-            # Plot the closing price as a line for each stock
-            p.line(stock_data.index, stock_data["4. close"], line_width=2, legend_label=symbol,
-                   color=color, line_dash="solid")
+
 
     # Add HoverTool for displaying additional information on hover
     hover = HoverTool()
